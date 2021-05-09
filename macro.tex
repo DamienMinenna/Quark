@@ -1,0 +1,250 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Maths macros
+
+%%%%%%%%%%%
+% Maths letter %
+%%%%%%%%%%%
+%mathbf
+\newcommand{\bfA}{{\mathbf{A}}}
+\newcommand{\bfa}{{\mathbf{a}}}
+\newcommand{\bfB}{{\mathbf{B}}}
+\newcommand{\bfb}{{\mathbf{b}}}
+\newcommand{\bfD}{{\mathbf{D}}}
+\newcommand{\bfE}{{\mathbf{E}}}
+\newcommand{\bfe}{{\mathbf{e}}}
+\newcommand{\bfF}{{\mathbf{F}}}
+\newcommand{\bff}{{\mathbf{f}}}
+\newcommand{\bfH}{{\mathbf{H}}}
+\newcommand{\bfJ}{{\mathbf{J}}}
+\newcommand{\bfk}{{\mathbf{k}}}
+\newcommand{\bfP}{{\mathbf{P}}}
+\newcommand{\bfp}{{\mathbf{p}}}
+\newcommand{\bfr}{{\mathbf{r}}}
+\newcommand{\bfq}{{\mathbf{q}}}
+\newcommand{\bfS}{{\mathbf{S}}}
+\newcommand{\bfv}{{\mathbf{v}}}
+\newcommand{\bfw}{{\mathbf{w}}}
+% mathrm
+\newcommand{\rmb}{{\mathrm b}}
+\newcommand{\rmc}{{\mathrm c}}
+\newcommand{\rmD}{{\mathrm D}}
+\newcommand{\rmd}{{\mathrm d}}
+\newcommand{\upd}{{\, \mathrm d}}
+\newcommand{\rme}{{\mathrm e}}
+\newcommand{\upe}{{\, \mathrm e}}
+\newcommand{\rmg}{{\mathrm g}}
+\newcommand{\rmi}{{\mathrm i}}
+\newcommand{\rmj}{{\mathrm j}}
+\newcommand{\rmk}{{\mathrm k}}
+\newcommand{\rmpp}{{\mathrm p}}
+% mathcal
+\newcommand{\cA}{{\mathcal A}}
+\newcommand{\bcA}{{\boldsymbol{\mathcal A}}}
+\newcommand{\cB}{{\mathcal B}}
+\newcommand{\bcB}{{\boldsymbol{\mathcal B}}}
+\newcommand{\cC}{{\mathcal C}}
+\newcommand{\cD}{{\mathcal D}}
+\newcommand{\cE}{{\mathcal E}}
+\newcommand{\bcE}{{\boldsymbol{\mathcal E}}}
+\newcommand{\cF}{{\mathcal F}}
+\newcommand{\cG}{{\mathcal G}}
+\newcommand{\cH}{{\mathcal H}}
+\newcommand{\bcH}{{\boldsymbol{\mathcal H}}}
+\newcommand{\cI}{{\mathcal I}}
+\newcommand{\cJ}{{\mathcal J}}
+\newcommand{\cK}{{\mathcal K}}
+\newcommand{\cL}{{\mathcal L}}
+\newcommand{\cM}{{\mathcal M}}
+\newcommand{\cN}{{\mathcal N}}
+\newcommand{\cO}{{\mathcal O}}
+\newcommand{\cP}{{\mathcal P}}
+\newcommand{\cR}{{\mathcal R}}
+\newcommand{\cS}{{\mathcal S}}
+\newcommand{\cT}{{\mathcal T}}
+\newcommand{\cU}{{\mathcal U}}
+\newcommand{\cV}{{\mathcal V}}
+\newcommand{\cZ}{{\mathcal Z}}
+% mathbb
+\newcommand{\AAb}{{\mathbb A}}
+\newcommand{\BB}{{\mathbb B}}
+\newcommand{\CC}{{\mathbb C}}
+\newcommand{\DD}{{\mathbb D}}
+\newcommand{\EE}{{\mathbb E}}
+\newcommand{\II}{{\mathbb I}}
+\newcommand{\NN}{{\mathbb N}}
+\newcommand{\QQ}{{\mathbb Q}}
+\newcommand{\RR}{{\mathbb R}}
+\newcommand{\SSb}{{\mathbb S}}
+\newcommand{\ZZ}{{\mathbb Z}}
+% mathfrak
+\newcommand{\fkm}{s} %{{\mathfrak m}}
+% sans serif
+\newcommand{\sA}{{\mathsf A}}
+\newcommand{\bsA}{{\boldsymbol{\mathsf{A}}}}
+\newcommand{\sB}{{\mathsf B}}
+\newcommand{\bsB}{{\boldsymbol{\mathsf{B}}}}
+\newcommand{\sC}{{\mathsf C}}
+\newcommand{\bsC}{{\boldsymbol{\mathsf{C}}}}
+\newcommand{\sD}{{\mathsf D}}
+\newcommand{\bsD}{{\boldsymbol{\mathsf{D}}}}
+\newcommand{\sE}{{\mathsf E}}
+\newcommand{\bsE}{{\boldsymbol{\mathsf{E}}}}
+\newcommand{\sF}{{\mathsf F}}
+\newcommand{\bsF}{{\boldsymbol{\mathsf{F}}}}
+\newcommand{\sH}{{\mathsf H}}
+\newcommand{\bsH}{{\boldsymbol{\mathsf{H}}}}
+\newcommand{\sI}{{\mathsf I}}
+\newcommand{\bsK}{{\boldsymbol{\mathsf{K}}}}
+\newcommand{\sK}{{\mathsf K}}
+\newcommand{\bsI}{{\boldsymbol{\mathsf{I}}}}
+\newcommand{\sL}{{\mathsf L}}
+\newcommand{\bsL}{{\boldsymbol{\mathsf{L}}}}
+\newcommand{\sN}{{\mathsf N}}
+\newcommand{\bsN}{{\boldsymbol{\mathsf{N}}}}
+\newcommand{\sn}{{\mathsf n}}
+\newcommand{\sS}{{\mathsf S}}
+\newcommand{\bsS}{{\boldsymbol{\mathsf{S}}}}
+\newcommand{\sV}{{\mathsf V}}
+\newcommand{\bsV}{{\boldsymbol{\mathsf{V}}}}
+\newcommand{\sv}{{\mathsf v}}
+\newcommand{\bsv}{{\boldsymbol{\mathsf{v}}}}
+
+
+%%%%%%%%%%%
+% Maths symbols %
+%%%%%%%%%%%
+% operator %
+\newcommand{\rot}{{\mathrm{rot}} \, } % Rotationnel 
+\renewcommand{\div}{\mathrm{div} \, } % Divergence
+% Sin/Cos cardinal %
+\newcommand{\sinc}{{\mathrm{sinc}} \, } % sin cardinal 
+\newcommand{\cosc}{{\mathrm{cosc}} \, } % cos cardinal 
+% derivative
+\newcommand{\derivep}[2]{ \frac{\partial #1}{\partial #2} }
+\newcommand{\deriv}[2]{ \frac{\mathrm{d} #1}{\mathrm{d} #2} }
+% transverse matrices
+\newcommand{\transv}{^{\mathsf{T}}}
+% Equal def
+\newcommand\equaldef{\mathrel{\stackrel{\makebox[0pt]{\mbox{\normalfont\tiny def}}}{\, \, = \, \,}}}
+% complex conjugate
+\newcommand{\cc}{\mathrm{c.c.}}
+
+\renewcommand\qedsymbol{$\square$} % cqfd
+
+
+%%%%%%%%%%%
+% Physics cst %
+%%%%%%%%%%%
+\newcommand\melec{m_{\mathrm{e}}} %masse electron
+
+
+\newcommand\dimo{\textsc{dimoha}}
+\newcommand\mvtrad{\textsc{mvtrad}}
+
+%% Maths macros
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% bibliography macros
+
+\renewcommand{\and}{\! {\normalfont{and}} \,}
+\newcommand{\et}{\! {\normalfont{et}} \,}
+\newcommand{\edit}{{(\normalfont{ed})}}
+
+\newcommand{\Name}[1]{\textsc{#1},}
+\newcommand{\Article}[1]{{``#1,''}}
+\newcommand{\Review}[1]{{\itshape #1},}
+\newcommand{\Vola}[1]{{\itshape #1}}
+\newcommand{\Volb}[1]{vol.~{\itshape #1}}
+\newcommand{\Voln}[2]{{\itshape #1}, n\textdegree $\,$#2,}
+\newcommand{\Vol}[1]{{\itshape #1},}
+\newcommand{\Yearb}[1]{#1}
+\newcommand{\Year}[1]{#1,}
+\newcommand{\Pageb}[1]{{\normalfont p.~#1}}
+\newcommand{\Page}[1]{{\normalfont p.~#1}}
+\newcommand{\Pagesb}[2]{{\normalfont p.~#1-#2}}
+\newcommand{\Pages}[2]{{\normalfont #1-#2}}
+\newcommand{\Book}[1]{{\itshape #1,}}
+\newcommand{\Publ}[1]{{\normalfont(#1),}}
+\newcommand{\Editor}[1]{{\normalfont edited by}\ {\scshape #1}}
+\newcommand{\Section}[1]{{\normalfont sect.~#1}}
+\newcommand{\URL}[1]{url: \url{#1}}
+\newcommand{\DOI}[1]{doi: \href{http://doi.org/#1}{#1}}
+\newcommand{\TEL}[1]{tel: \href{https://tel.archives-ouvertes.fr/tel-#1}{#1}}
+\newcommand{\HAL}[1]{hal: \href{https://hal.archives-ouvertes.fr/hal-#1}{#1}}
+\newcommand{\ARXIV}[1]{arXiv: \href{https://arxiv.org/abs/#1}{#1}}
+\newcommand{\BIBCODE}[2]{Bibcode: \href{https://ui.adsabs.harvard.edu/abs/#1}{#2}}
+
+\newcommand{\REVIEW}[4]{\Review{#1} \Vol{#2} \Year{#3} \Page{#4}}
+\newcommand{\SAME}[3]{\Vol{#1} \Year{#2} \Page{#3}}
+
+\newcommand{\etal}{\emph{et al}}
+
+%% bibliography macros
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% other macro
+
+\newcommand{\chapref}[1]{\hyperref[#1]{chapter~\ref{#1}}}
+\newcommand{\secref}[1]{\hyperref[#1]{section~\ref{#1}}}
+\newcommand{\defref}[1]{\hyperref[#1]{definition~\ref{#1}}}
+\newcommand{\remref}[1]{\hyperref[#1]{remark~\ref{#1}}}
+\newcommand{\appref}[1]{\hyperref[#1]{appendix~\ref{#1}}}
+\newcommand{\figref}[1]{\hyperref[#1]{figure~\ref{#1}}}
+\newcommand{\tabref}[1]{\hyperref[#1]{table~\ref{#1}}}
+
+%% other macro
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Theorems
+
+\usepackage[framemethod=default]{mdframed} % Required for creating the theorem, definition, exercise and corollary boxes
+
+% Definition box
+\newmdenv[skipabove=7pt,
+skipbelow=7pt,
+rightline=false,
+leftline=true,
+topline=false,
+bottomline=false,
+linecolor=QuarkColor,
+innerleftmargin=5pt,
+innerrightmargin=5pt,
+innertopmargin=0pt,
+leftmargin=-3.41mm,
+rightmargin=-1.8mm,
+linewidth=4pt,
+innerbottommargin=0pt]{dBox}	
+
+% Boxed/framed environments
+\newtheoremstyle{theostyle}% % Theorem style name
+{0pt}% Space above
+{0pt}% Space below
+{\normalfont}% % Body font
+{}% Indent amount
+{\small\Bighelv\color{QuarkColor}}% % Theorem head font
+{\;}% Punctuation after theorem head
+{0.25em}% Space after theorem head
+{} % Optional theorem note
+\renewcommand{\qedsymbol}{$\blacksquare$}% Optional qed square
+
+\newcounter{dummy} 
+\numberwithin{dummy}{section}
+
+\theoremstyle{theostyle}
+\newtheorem{definitionT}[dummy]{Definition}
+\newenvironment{definition}{\vspace{0.5\baselineskip} \begin{dBox}\begin{definitionT}}{\end{definitionT}\end{dBox}\vspace{0.5\baselineskip}}	
+
+\theoremstyle{theostyle}
+\newtheorem{remarqueT}[dummy]{Remark}
+\newenvironment{remark}{\vspace{0.5\baselineskip} \begin{dBox}\begin{remarqueT}}{\end{remarqueT}\end{dBox}\vspace{0.5\baselineskip}}
+
+\theoremstyle{theostyle}
+\newtheorem{theoremeT}[dummy]{Theoreme}
+\newenvironment{theorem}{\begin{dBox}\begin{theoremeT}}{\end{theoremeT}\end{dBox}}
+
+%% Theorems
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

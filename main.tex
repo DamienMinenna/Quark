@@ -1,0 +1,211 @@
+\documentclass[a4paper,10pt,fleqn,openright]{Quark}
+% fleqn : left-justified equations
+% openany : do not put blankpage if a new chapter start on a odd page
+%% END Options
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Footer
+
+\renewcommand{\leftfootname}{University of ...}
+\renewcommand{\middlefootname}{\it Dated: \today}
+\renewcommand{\rightfootname}{\sc Name}
+
+
+\definecolor{QuarkColor}{RGB}{21,81,149} % Main color
+
+\definecolor{chaptergrey}{RGB}{21,81,149} % Chapter color
+
+
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% DOCUMENT 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Cover 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{TeX/cover.tex}
+
+\restoregeometry
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Licence 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\begin{adjustwidth}{0pt}{-\marginBiblio}
+
+\input{TeX/licence.tex}
+
+\end{adjustwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Abstract 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\begin{adjustwidth}{0pt}{-\marginBiblio}
+
+%% Chapter Abstract. See abstract.txt in the TeX folder
+\chapter*{Abstract}
+\thispagestyle{fancy}
+\addcontentsline{toc}{chapter}{\protect\numberline{}Abstract}%
+
+\input{TeX/abstract}
+
+\end{adjustwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Thanks 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\begin{adjustwidth}{0pt}{-\marginBiblio}
+
+% Chapter Thanks
+\input{TeX/thanks}
+
+% table of contents
+\addcontentsline{toc}{chapter}{\protect\numberline{}Contents}%
+\thispagestyle{fancy}
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+\end{adjustwidth}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BODY 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Begining of the body
+\makeatletter
+\renewcommand{\@makechapterhead}[1]{%
+  \chapterheadstartvskip%
+  {\size@chapter{\sectfont
+    {  \begin{adjustwidth}{0pt}{-\marginBiblio}
+     {\raggedleft\chapnumfont
+      \ifnum \c@secnumdepth >\m@ne%
+        \if@mainmatter\thechapter\else\phantom{\thechapter}%
+      \fi\else\phantom{\thechapter}\fi
+      \par\nobreak}%
+      \end{adjustwidth}
+      }
+    { \begin{adjustwidth}{0pt}{-\marginBiblio}
+    {\raggedleft\advance\leftmargin10em\interlinepenalty\@M #1\par}
+    \end{adjustwidth} }}
+  \nobreak\chapterheadendvskip}
+  }%
+\makeatother
+
+% New part
+\part{First part}	
+\newpage
+$~$
+\newpage
+
+\input{TeX/chapter1}
+
+\input{TeX/chapter2}
+
+
+%% CONCLU
+\part{Conclusions and  Appendices}
+
+\newpage
+$~$
+\newpage
+
+\input{TeX/conclusion}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Appendices 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\appendix
+
+\input{TeX/appendix1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PUBLICATIONS  and BIBLIO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Ending of the body (modification of the chapter format)
+\renewcommand{\chapterheadstartvskip}{\vspace*{-6.33cm}}
+
+\makeatletter
+\renewcommand{\@makechapterhead}[1]{%
+  \chapterheadstartvskip%
+  {\size@chapter{\sectfont
+    {  
+     {\raggedleft\chapnumfont
+      \ifnum \c@secnumdepth >\m@ne%
+        \if@mainmatter\thechapter\else\phantom{\thechapter}%
+      \fi\else\phantom{\thechapter}\fi
+      \par\nobreak}%
+      
+      }
+    { 
+    {\raggedleft\advance\leftmargin10em\interlinepenalty\@M #1\par}
+     }}
+  \nobreak\chapterheadendvskip}
+  }%
+\makeatother
+
+
+%%%%%%%%%%%%%% PUBLICATIONS
+\begin{adjustwidth}{0pt}{-\marginBiblio}
+
+\newpage
+\input{TeX/mypublications}
+
+\end{adjustwidth}
+
+%%%%%%%%%%%%%% BIBLIO
+%\newpage
+\begin{adjustwidth}{0pt}{-\marginBiblio}
+
+\input{TeX/mybiblio}
+
+\end{adjustwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ABSTRACT on the last page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% To be on a even page at the end
+\newpage
+$~$
+\newpage
+
+\begin{adjustwidth}{0pt}{-\marginBiblio}
+\thispagestyle{empty}
+
+\begin{small}
+
+\section*{Abstract}
+\input{TeX/abstract}
+
+\end{small}
+
+% Page counter
+\label{p:finalPage}
+
+\end{adjustwidth}
+
+
+\end{document}
